@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+    --card: 20 20 20;
+    --card-foreground: 255 255 255;
+    --primary: 0 212 255;
+    --primary-foreground: 10 10 10;
+    --secondary: 26 26 26;
+    --secondary-foreground: 255 255 255;
+    --danger: 255 71 87;
+    --danger-foreground: 255 255 255;
+    --warning: 255 165 2;
+    --warning-foreground: 10 10 10;
+    --success: 46 213 115;
+    --success-foreground: 10 10 10;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  * {
+    @apply border-gray-800;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  
+  .glow-border {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  
+  .glow-border-strong {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  }
+}
